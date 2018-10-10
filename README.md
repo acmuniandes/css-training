@@ -1,4 +1,4 @@
-#CSS Training
+# CSS Training
 
 Although CSS syntax may be quite simple and easy to catch, it may get a lot of practice to achieve decent UI when built from scratch.
 
