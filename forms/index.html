@@ -9,26 +9,26 @@
 </head>
 
 <body>
-  <div>
-    <h1>¡Join us in this great journey!</h1>
+  <div class="container">
+    <h1>Join us in this great journey!</h1>
     <p>First, we need to know some things about you..</p>
     <form>
-      <label>
+      <div class="input-container">
         <div class="main-label">Username</div>
         <div class="aux-label">How do you want to be known for the other adventurers?</div>
-        <input type="text" placeholder="Pyre">
-      </label>
-      <label>
+        <input id="user" type="text" placeholder="Pyre">
+      </div class="input-container">
+      <div class="input-container">
         <div class="main-label">Password</div>
         <div class="aux-label">We dont wan't anyone other than you to be playing as your character!</div>
-        <input type="password" placeholder="Password">
-      </label>
-      <label>
+        <input id="pwd" type="password" placeholder="Password">
+      </div class="input-container">
+      <div class="input-container">
         <div class="main-label">Confirm password</div>
         <div class="aux-label">Make sure you didn't type a wrong password</div>
-        <input type="password" placeholder="Confirm">
-      </label>
-      <button type="submit">Join the adventure!</button>
+        <input id="conf-pwd" type="password" placeholder="Confirm">
+      </div class="input-container">
+      <button>Join the adventure!</button>
     </form>
   </div>
 </body>
@@ -37,6 +37,85 @@
 
 <style>
 
+  
+  @import url('https://fonts.googleapis.com/css?family=Lato|Merriweather');
+
 /*Your css rules go here*/
+
+html, body{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  color: whitesmoke;
+  
+}
+
+html{
+  background: url('background.jpg');
+  background-size: cover;
+  object-fit: contain;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 2rem;
+  background: rgba(20,20,20, 0.64);
+  box-shadow: 0px 0px 180px 170px rgba(20,20,20, 0.64);
+  margin-top: 12vh;
+}
+
+h1{
+  font-size: 2.6rem;
+  margin-bottom: 0;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+
+.main-label{
+  font-size: 1.4rem;
+}
+
+.aux-label{
+  font-size: 1rem;
+}
+
+input{
+  border: 0;
+  font-size: 1.15rem;
+  background-color: transparent;
+  color: white;
+  width: 64%;
+  border-bottom: 2px rgb(0, 106, 255) solid;
+}
+
+.input-container{
+  margin-bottom: 16px;
+}
+
+button{
+  background: transparent;
+  border: 2px rgb(0, 106, 255) solid;
+  padding: 8px;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Lato', sans-serif;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+button:hover{
+  background: rgba(255, 255, 255, 0.3);
+}
 
 </style>
